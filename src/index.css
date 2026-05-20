@@ -1,1 +1,28 @@
+@font-face {
+  font-family:Noto;
+  src: url(/assets/fonts/static/NotoSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family:Noto;
+  src: url(/assets/fonts/static/NotoSans-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family:Noto;
+  src: url(/assets/fonts/static/NotoSans-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family:Noto;
+  src: url(/assets/fonts/NotoSans-Italic-VariableFont_wdth\,wght.ttf);
+  font-style: italic;
+  font-style: italic
+}
+f{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
 @import "tailwindcss";
+@theme{
+  --font-noto : Noto;
+}
