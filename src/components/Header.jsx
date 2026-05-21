@@ -2,7 +2,7 @@
 export default function Header({setMode,isDark}) {
   let headerStyles = `flex justify-between items-center 
     px-5 left-2 right-2 h-15 shadow-md rounded-xl box-border 
-    fixed top-2 bg-white sm:h-20 dark:bg-[hsl(225,23%,24%)] transtion duration-200`
+    sticky top-2 bg-[hsl(217,61%,90%)] sm:h-20 dark:bg-[hsl(225,23%,24%)] transtion duration-200`
   let buttonStyles = `w-10 h-10 bg-yellow-50 flex 
       justify-center items-center rounded-md 
       shadow-xs
