@@ -1,6 +1,10 @@
 import Card from "./cards.jsx"
-import data from "../data.json"
+import {useState, useEffect} from "react"
 export default function () {
+  const [data,setData] = useState(JSON.parse(localStorage.getItem("data")))
+  useEffect(()=>{
+    localStorage.setItem("data",JSON.stringify(data))
+  },[data])
   const buttonStyles = `bg-white 
 	px-4 py-2 
 	rounded-4xl 
@@ -23,7 +27,7 @@ export default function () {
 	`;
   const Cards = data.map((element)=>{
     return(
-      <Card {...element}/>
+      <Card {...element} setData={setData}/>
     )
   })
   return (

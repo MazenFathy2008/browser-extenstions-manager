@@ -1,6 +1,5 @@
-import {useState} from "react"
-export default function Card(props) {
-  const [chaecked,setChecked] = useState(props.isActive)
+import { useState } from "react";
+export default function Card({ setData, ...props }) {
   const buttonStyles = `
   bg-white 
 	px-4 py-2 
@@ -23,6 +22,22 @@ export default function Card(props) {
 	sm:w-23
   border
     `;
+  function setChecked() {
+    setData((prev) => {
+      const newData = prev.map((element) => {
+        if (element.name == props.name) {
+          return {
+            ...props,
+            isActive: !props.isActive,
+          };
+        }
+        return {
+          ...element,
+        };
+      });
+      return newData;
+    });
+  }
   return (
     <div
       className="
@@ -47,11 +62,7 @@ export default function Card(props) {
       h-[50%]
       "
       >
-        <img
-          src={props.logo}
-          alt="dev-lens"
-          className="w-15"
-        />
+        <img src={props.logo} alt="dev-lens" className="w-15" />
         <div className="flex justify-center flex-col">
           <h3 className="font-bold text-xl text-[hsl(226,25%,17%)] dark:text-white">
             {props.name}
@@ -64,8 +75,9 @@ export default function Card(props) {
       <div className="h-[50%] flex items-center justify-between w-full">
         <button className={buttonStyles}>Remove</button>
         <div>
-          <input type="checkbox" className="peer hidden" checked = {chaecked} />
-          <div className="
+          <input type="checkbox" className="peer hidden" checked={props.isActive} />
+          <div
+            className="
           w-15 h-7 bg-[hsl(3,79%,53%)] rounded-4xl 
           before:content-[''] 
           relative 
@@ -84,7 +96,7 @@ export default function Card(props) {
           transtion
           duration-200
           "
-          onClick={()=>{setChecked(prev=>!prev)}}
+            onClick={setChecked}
           ></div>
         </div>
       </div>
