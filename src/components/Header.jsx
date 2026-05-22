@@ -13,12 +13,12 @@ export default function Header({setMode,isDark}) {
       dark:hover:bg-blue-900
     `
   const icon = isDark? "sun":"moon"
-  const url = `/assets/images/icon-${icon}.svg`
+  const url = `./assets/images/icon-${icon}.svg`
   return (
     <header
       className={headerStyles}
     >
-      <img src="/assets/images/logo.svg" alt="logo" className="w-40 sm:w-60" />
+      <img src="./assets/images/logo.svg" alt="logo" className="w-40 sm:w-60" />
       <button
         className={buttonStyles}
         onClick={()=>{setMode(prev=>!prev)}}
