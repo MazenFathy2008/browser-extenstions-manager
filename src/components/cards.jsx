@@ -38,6 +38,18 @@ export default function Card({ setData, ...props }) {
       return newData;
     });
   }
+  function removeCard(){
+    setData((prev) => {
+      const newData = prev.filter((element) => {
+        if (!(element.name == props.name)) {
+          return {
+            ...element
+          };
+        }
+      });
+      return newData;
+    });
+  }
   return (
     <div
       className="
@@ -73,7 +85,7 @@ export default function Card({ setData, ...props }) {
         </div>
       </div>
       <div className="h-[50%] flex items-center justify-between w-full">
-        <button className={buttonStyles}>Remove</button>
+        <button className={buttonStyles} onClick={removeCard}>Remove</button>
         <div>
           <input type="checkbox" className="peer hidden" checked={props.isActive} />
           <div

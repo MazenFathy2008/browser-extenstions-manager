@@ -1,6 +1,6 @@
 import data from "./data.json";
 const isInlocalStorage = JSON.parse(localStorage.getItem("data"));
-if (isInlocalStorage) {
+if (isInlocalStorage.length > 0) {
   let i = 0;
   const newData = data.map((element) => {
     if (element.name == isInlocalStorage[i].name) {
