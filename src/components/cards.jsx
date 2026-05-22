@@ -1,5 +1,6 @@
 import { useState } from "react";
 export default function Card({ setData, ...props }) {
+  
   const buttonStyles = `
   bg-white 
 	px-4 py-2 
@@ -31,9 +32,7 @@ export default function Card({ setData, ...props }) {
             isActive: !props.isActive,
           };
         }
-        return {
-          ...element,
-        };
+        return element
       });
       return newData;
     });
@@ -42,9 +41,7 @@ export default function Card({ setData, ...props }) {
     setData((prev) => {
       const newData = prev.filter((element) => {
         if (!(element.name == props.name)) {
-          return {
-            ...element
-          };
+          return element  
         }
       });
       return newData;
@@ -90,7 +87,8 @@ export default function Card({ setData, ...props }) {
           <input type="checkbox" className="peer hidden" checked={props.isActive} />
           <div
             className="
-          w-15 h-7 bg-[hsl(3,79%,53%)] rounded-4xl 
+          w-15 h-7 
+          peer-checked:bg-[hsl(3,79%,53%)] rounded-4xl 
           before:content-[''] 
           relative 
           before:absolute
@@ -100,9 +98,9 @@ export default function Card({ setData, ...props }) {
           before:rounded-full
           before:top-[50%]
           before:-translate-y-1/2
-          before:left-0.5
-          peer-checked:bg-[hsl(226,11%,37%)]
-          peer-checked:before:left-9
+          peer-checked:before:left-0.5
+          bg-[hsl(226,11%,37%)]
+          before:left-9
           before:transtion
           before:duration-200
           transtion

@@ -1,5 +1,5 @@
 import data from "./data.json";
-const isInlocalStorage = JSON.parse(localStorage.getItem("data"));
+const isInlocalStorage = JSON.parse(localStorage.getItem("data"))||[];
 if (isInlocalStorage.length > 0) {
   let i = 0;
   const newData = data.map((element) => {
@@ -11,9 +11,7 @@ if (isInlocalStorage.length > 0) {
       i++;
       return newEle
     }
-    return {
-      ...element,
-    };
+    return element
   });
   localStorage.setItem("data", JSON.stringify(newData));
 } else {
