@@ -10,13 +10,13 @@ Error generating stack: `+e.message+`
     px-5 left-2 right-2 h-15 shadow-md rounded-xl box-border 
     sticky top-2 bg-white sm:h-20 dark:bg-[hsl(225,23%,24%)] transtion duration-200
     z-10
-    `,children:[(0,m.jsx)(`img`,{src:`/assets/images/logo.svg`,alt:`logo`,className:`w-40 sm:w-60`}),(0,m.jsx)(`button`,{className:`w-10 h-10 bg-yellow-50 flex 
+    `,children:[(0,m.jsx)(`img`,{src:`./assets/images/logo.svg`,alt:`logo`,className:`w-40 sm:w-60`}),(0,m.jsx)(`button`,{className:`w-10 h-10 bg-yellow-50 flex 
       justify-center items-center rounded-md 
       shadow-xs
       shadow-black transition duration-200 hover:shadow-sm hover:bg-gray-400
       sm:h-13 sm:w-13 focus:outline-2 outline-amber-700 outline-offset-3 focus:shadow-none dark:bg-[hsl(226,11%,37%))]
       dark:hover:bg-blue-900
-    `,onClick:()=>{e(e=>!e)},children:(0,m.jsx)(`img`,{src:`/assets/images/icon-${t?`sun`:`moon`}.svg`,alt:`mood-icon`})})]})}function g({setData:e,...t}){function n(){e(e=>e.map(e=>e.name==t.name?{...t,isActive:!t.isActive}:e))}function r(){e(e=>e.filter(e=>{if(e.name!=t.name)return e}))}return(0,m.jsxs)(`div`,{className:`\r
+    `,onClick:()=>{e(e=>!e)},children:(0,m.jsx)(`img`,{src:`./assets/images/icon-${t?`sun`:`moon`}.svg`,alt:`mood-icon`})})]})}function g({setData:e,...t}){function n(){e(e=>e.map(e=>e.name==t.name?{...t,isActive:!t.isActive}:e))}function r(){e(e=>e.filter(e=>{if(e.name!=t.name)return e}))}return(0,m.jsxs)(`div`,{className:`\r
             h-60 \r
             rounded-2xl \r
             shadow-mauve-900  \r
