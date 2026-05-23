@@ -14,6 +14,7 @@ May be you have many extensions on your browser, and you want to organize them; 
 # Tech stack
 - Java script
 - React
+- Vite
 - tailwind Css
 - gh-pages
 # motivation
